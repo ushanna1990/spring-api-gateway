@@ -8,7 +8,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true           # Enable dynamic routes using service names
+          enabled: true
           lowerCaseServiceId: false
       mvc:
         routes:
@@ -28,6 +28,7 @@ spring:
             filters:
               - StripPrefix=1
 
+#Eureka Client Configuration
 eureka:
   client:
     service-url:
