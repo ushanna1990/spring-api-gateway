@@ -4,29 +4,6 @@ server:
 spring:
   application:
     name: spring-api-gateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: false
-      mvc:
-        routes:
-          - id: spring-order-service
-            uri: lb://SPRING-ORDER-SERVICE
-            predicates:
-              - Path=/api/order/**
-              - Method=GET,POST
-            filters:
-              - StripPrefix=1
-
-          - id: spring-payment-service
-            uri: lb://SPRING-PAYMENT-SERVICE
-            predicates:
-              - Path=/api/payment/**
-              - Method=GET,POST
-            filters:
-              - StripPrefix=1
 
 #Eureka Client Configuration
 eureka:
