@@ -29,6 +29,10 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc</artifactId>
+		</dependency>
 		<!--This dependency is used to create API Gateway using Spring Cloud Gateway-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
